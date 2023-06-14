@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1686679157 "c:/Users/natha/Documents/ImageProcessing/old_exams/summary.tex" "summary.pdf" "summary" 1686679158 0
+["pdflatex"] 1686747035 "c:/Users/natha/Documents/ImageProcessing/old_exams/summary.tex" "summary.pdf" "summary" 1686747036 0
   "C:/Users/natha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1686668340 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/natha/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1686664858 11548 eb8e1830128b3c461d21d1b75e17b7f5 ""
   "C:/Users/natha/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1686307848 23185514 748162c3ae427c11873f445ca61e5a6c ""
@@ -40,6 +40,7 @@
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty" 1655058192 4474 f04cd1cc7bd76eb033e6fb12eb6a0d77 ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty" 1655058193 2444 70065bddd85997dc1fd0bb7ae634e5fa ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1669847796 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
+  "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/base/omscmr.fd" 1669847796 2469 24e8437abfd2393aed5f0ac9f00f801e ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1669847796 8448 c33a4e1cb35cee9b33c2b21033b73e39 ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1623003186 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg" 1578057145 1104 7ac475a4e3466b0b43e138e9356bda83 ""
@@ -51,10 +52,10 @@
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1665067579 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty" 1665067579 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1681896761 29940 9473d58112bc8a88f5505b823a053dde ""
-  "c:/Users/natha/Documents/ImageProcessing/old_exams/summary.tex" 1686679156 7459 4d47aef04083f0ca468bbc6676b0e13a ""
+  "c:/Users/natha/Documents/ImageProcessing/old_exams/summary.tex" 1686747034 9463 c9c7e6ad8b2a4b38a6328ad721dd4707 ""
   "images/1.png" 1686667710 19184 ce8c9e798504001b251db1cac3fc96e6 ""
-  "summary.aux" 1686679157 1025 420d547247d7767012ef9f9f19baf300 "pdflatex"
-  "summary.tex" 1686679156 7459 4d47aef04083f0ca468bbc6676b0e13a ""
+  "summary.aux" 1686747036 1348 69d2d0959e20579fe926a06a45c4d51f "pdflatex"
+  "summary.tex" 1686747034 9463 c9c7e6ad8b2a4b38a6328ad721dd4707 ""
   (generated)
   "summary.aux"
   "summary.log"

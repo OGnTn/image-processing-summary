@@ -222,5 +222,48 @@ The direct transform is given by:
     coeff = b^T s c = b^{-1} s c
 \end{equation}
 \subsection{Discrete Karhunen Loeve Transform (KLT)}
+($s_1$, $s_2$, ..., $s_k$, ..., $s_K$) sample of an ensemble of NxM images. \\
+Calculate L basis images such that for each L $<=$ P, the expected "difference" between s and s' is minimized. \\
+\begin{equation}
+    E\left( \lVert s - s' \rVert^2 \right) \quad \textrm{is minimal}
+\end{equation}
+\subsubsection{Notations}
+\begin{itemize}
+    \item Estimated Mean: \\ \begin{equation}
+        m_s = \frac{1}{K} \sum_{k=1}^{K} s_k \quad \textrm{$m_s$, $s_k$ are vectors}
+    \end{equation}
+    dimension [NM, 1], which is estimation of the mean vector E\{s\}
+    \item Estimated Covariance matrix: \\ \begin{equation}
+        C_s = \frac{1}{K-1} \sum_{k=1}^{K} (s_k - m_s)(s_k - m_s)^T
+    \end{equation}
+    dimension [NM, NM], which is estimation of the covariance matrix E\{(s - E\{s\})(s - E\{s\})$^T$\}
+\end{itemize}
+variance-covariance matrix expresses how much the different elements of the vector are correlated. \\
+
+\subsubsection{Definition}
+\begin{itemize}
+    \item $b_k$ are eigenvectors of $C_s$ \\
+    \item $\lambda_k$ are eigenvalues of these eigenvectors \\
+    \item eigenvalues ordered in decreasing order: $\lambda_1 \geq \lambda_2 \geq ... \geq \lambda_L \geq ... \geq \lambda_{P}$
+    \item KLT transformation matrix is given by: \begin{equation}
+        b = (b_1, b_2, ..., b_P)
+    \end{equation}
+    \item DKLT is defined as: \begin{equation}
+        coeff = b^T (s - m_s)
+    \end{equation}
+\end{itemize}
+\subsubsection{Properties}
+\begin{itemize}
+    \item $m_{coeff} = 0$ 
+    \item $C_{coeff} = diag(\lambda_1, \lambda_2, ..., \lambda_P)$
+    \item The elements of coeff are uncorrelated
+    \item $\lambda_i$ is equal to the variance of $coeff_i$ along the eigenvector $b_i$
+    \item Since $C_s$ is a real symmetric matrix, it is always possible to find
+    a set of orthogonal eigenvectors. It therefore follows that s can be reconstructed like this:
+    \begin{equation}
+        s = b coeff + m_s
+    \end{equation}
+\end{itemize}
+
 
 \end{document}
