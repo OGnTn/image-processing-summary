@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1686747035 "c:/Users/natha/Documents/ImageProcessing/old_exams/summary.tex" "summary.pdf" "summary" 1686747036 0
+["pdflatex"] 1686755036 "c:/Users/natha/Documents/ImageProcessing/old_exams/summary.tex" "summary.pdf" "summary" 1686755037 0
   "C:/Users/natha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1686668340 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/natha/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1686664858 11548 eb8e1830128b3c461d21d1b75e17b7f5 ""
   "C:/Users/natha/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1686307848 23185514 748162c3ae427c11873f445ca61e5a6c ""
@@ -24,6 +24,7 @@
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1247596667 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/natha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1247596666 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580393758 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -52,10 +53,10 @@
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1665067579 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty" 1665067579 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "C:/Users/natha/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1681896761 29940 9473d58112bc8a88f5505b823a053dde ""
-  "c:/Users/natha/Documents/ImageProcessing/old_exams/summary.tex" 1686747034 9463 c9c7e6ad8b2a4b38a6328ad721dd4707 ""
+  "c:/Users/natha/Documents/ImageProcessing/old_exams/summary.tex" 1686755034 12775 f33d1eb51330fb56584718ae4588e85b ""
   "images/1.png" 1686667710 19184 ce8c9e798504001b251db1cac3fc96e6 ""
-  "summary.aux" 1686747036 1348 69d2d0959e20579fe926a06a45c4d51f "pdflatex"
-  "summary.tex" 1686747034 9463 c9c7e6ad8b2a4b38a6328ad721dd4707 ""
+  "summary.aux" 1686755036 1488 8c6f40968c8a75ba343fc1c791b84885 "pdflatex"
+  "summary.tex" 1686755034 12775 f33d1eb51330fb56584718ae4588e85b ""
   (generated)
   "summary.aux"
   "summary.log"

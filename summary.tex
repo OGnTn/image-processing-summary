@@ -7,11 +7,11 @@
 \begin{document}
 \section{Global Transforms}
 \subsection{General Model}
-Represent an image s (with pixel values s (i,j)) as a weighted sum of basis images \[ b_k \]
+Represent an image s (with pixel values s (i,j)) as a weighted sum of basis images $b_k$
  with pixel values \[b_k(i,j).\]
 \begin{figure}[htp]
     \centering
-\includegraphics[width=8cm]{images/1.png}
+\includegraphics[width=12cm]{images/1.png}
 \end{figure}
 
 s: spatial domain (pixel domain); coeff: transformed domain (frequency domain)
@@ -36,7 +36,7 @@ s(i, j) , $coeff(k,l)$ , $b_{kl}$(i,j): scalars, i = 1,…, N; j = 1,…, M;
     coefficients used to represent the input
     \item inverse transform: tool that brings us from the transformed domain to the spatial domain.
 \end{itemize}
-
+\pagebreak
 \subsubsection{Vector Notation}
 Recipe for matrix to vector conversion:
 \begin{equation}\begin{split}
@@ -105,7 +105,7 @@ Projection s' of s on a vector $b_1$ is given by:
 \end{equation}
 ($coeff_1$ = projection coefficient) \\
 example in 3D:
-Projection s' of s on a pkane defined by two vectors $b_1$ and $b_2$ is given by:
+Projection s' of s on a plane defined by two vectors $b_1$ and $b_2$ is given by:
 \begin{equation}
     s' = b_1 \times coeff_1 + b_2 \times coeff_2
 \end{equation}
@@ -162,6 +162,7 @@ incase vectors bk are orthonormal, then:
 \begin{equation}
     coeff = b^T s
 \end{equation}
+\pagebreak
 \subsubsection{Specializations of the general model: Separable transforms}
 \begin{equation}
     s(i, j) = \sum_{k=1}^{N}\sum_{l=1}^{M}coeff(k, l) b_{kl}(i,j)
@@ -178,7 +179,6 @@ dimensions:
     \item s(i,j) coeff(k,l) $b_{kl}$(i,j) : scalars
     \item i = 1, ..., N; j = 1, ..., M;
 \end{itemize}
-\pagebreak
 \begin{equation}
     \begin{split}
         s(i,j) &= \sum_{k=1}^{N}\sum_{l=1}^{M}coeff(k,l) b_k(i) c_l(j) \\
@@ -221,6 +221,7 @@ The direct transform is given by:
 \begin{equation}
     coeff = b^T s c = b^{-1} s c
 \end{equation}
+\pagebreak
 \subsection{Discrete Karhunen Loeve Transform (KLT)}
 ($s_1$, $s_2$, ..., $s_k$, ..., $s_K$) sample of an ensemble of NxM images. \\
 Calculate L basis images such that for each L $<=$ P, the expected "difference" between s and s' is minimized. \\
@@ -244,7 +245,7 @@ variance-covariance matrix expresses how much the different elements of the vect
 \begin{itemize}
     \item $b_k$ are eigenvectors of $C_s$ \\
     \item $\lambda_k$ are eigenvalues of these eigenvectors \\
-    \item eigenvalues ordered in decreasing order: $\lambda_1 \geq \lambda_2 \geq ... \geq \lambda_L \geq ... \geq \lambda_{P}$
+    \item eigenvalues ordered in decreasing order: $\lambda_1 \geq \lambda_2 \geq ... \geq \lambda_{P}$
     \item KLT transformation matrix is given by: \begin{equation}
         b = (b_1, b_2, ..., b_P)
     \end{equation}
@@ -255,7 +256,7 @@ variance-covariance matrix expresses how much the different elements of the vect
 \subsubsection{Properties}
 \begin{itemize}
     \item $m_{coeff} = 0$ 
-    \item $C_{coeff} = diag(\lambda_1, \lambda_2, ..., \lambda_P)$
+    \item $C_{coeff} = diag(\lambda_1, \lambda_2, ..., \lambda_P)$ --$>$ the elements are uncorrelated (dklt decorrelates the input)
     \item The elements of coeff are uncorrelated
     \item $\lambda_i$ is equal to the variance of $coeff_i$ along the eigenvector $b_i$
     \item Since $C_s$ is a real symmetric matrix, it is always possible to find
@@ -263,7 +264,95 @@ variance-covariance matrix expresses how much the different elements of the vect
     \begin{equation}
         s = b coeff + m_s
     \end{equation}
+    \item if we make L smaller than P 
+    \begin{equation}
+        \begin{split}
+        s &\approxeq b_L coeff + m_s \\
+        b_L &= (b_1, b_2, ..., b_L, 0, 0, 0)
+        \end{split}
+    \end{equation}
+    \item Mean Square Error (MSE) is given by:
+    \begin{equation}
+        MSE = \sum_{j=1}^{P}\lambda_j - \sum_{j=1}^{L}\lambda_j = \sum_{j=L+1}^{P}\lambda_j
+    \end{equation}
+    The DKLT is optimal in the least square sense.
 \end{itemize}
+
+\subsubsection{Proof and Construction of KLT basis images}
+Assumptions:
+\begin{itemize}
+    \item s is a square image: [$N^2$, 1] \quad s': [L, 1] \quad L$<=$N$^2$ \\
+    Hypothesis: E\{s\} = 0 \quad E\{s'\} = 0
+    \item Impose that E\{$\lVert s - s' \rVert^2$\} is minimal $\forall$ L
+    \item orthonormal basis b=($b_1$, $b_2$, ..., $b_{N^2}$)\\
+    $b^T$b = I
+\end{itemize}
+forward transform: coeff=b$^T$s \\
+$C_s$ = E\{ss$^T$\} correlation of first element with itself, first element with second element, \dots \\
+\begin{equation}
+    \begin{bmatrix}
+        \sigma_s^2(1) & \dots & 0 \\
+        \vdots & \ddots & \vdots \\
+        0 & \dots & \sigma_s^2(N^2)
+    \end{bmatrix}
+\end{equation}
+
+
+$C_{coeff}$ = E\{coeff coeff$^T$\} correlation of first element with itself, first element with second element, \dots \\
+\begin{equation}
+    \begin{bmatrix}
+        \sigma_{coeff}^2(1) & \dots & 0 \\
+        \vdots & \ddots & \vdots \\
+        0 & \dots & \sigma_{coeff}^2(N^2)
+    \end{bmatrix}
+\end{equation}
+$C_{coeff} = E\{b^Tss^Tb\} = b^TE\{ss^T\}b = b^TC_sb$ --$>$ Link between $C_s$ and $C_{coeff}$ \\
+tr\{$C_s$\} = tr\{$C_{coeff}$\} = $\sum_{i=1}^{N^2}\sigma_{coeff}^2(i)$ = $\sum_{i=1}^{N^2}\sigma_s^2(i)$ \\
+
+inverse transform
+\begin{itemize}
+    \item \textbf{L = $N^2$} s = bcoeff\\
+    \begin{equation}
+        b = \begin{bmatrix}
+            b_{1, 1} & \dots & b_{1, N^2} \\
+            \vdots & \ddots & \vdots \\
+            b_{N^2, 1} & \dots & b_{N^2, N^2}
+        \end{bmatrix} = \begin{bmatrix}
+            b_1 & \dots & b_{N^2}
+        \end{bmatrix}
+    \end{equation}
+    \item \textbf{L $<$ $N^2$} s' = bcoeff\\
+    \begin{equation}
+        b' = \begin{bmatrix}
+            b_{1, 1} & \dots & b_{1, L} & 0 & \dots & 0 \\
+            \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+            b_{N^2, 1} & \dots & b_{N^2, L} & 0 & \dots & 0
+        \end{bmatrix} = \begin{bmatrix}
+            b_1 & \dots & b_L & 0 & \dots & 0
+        \end{bmatrix}
+    \end{equation}
+    or s' = bcoeff', where:
+    \begin{equation}
+        coeff'(i) = \begin{cases}
+            coeff(i) & \text{if } i = 1,\dots, L \\
+            0 & \text{if } i = L+1,\dots, N^2
+        \end{cases}
+    \end{equation}
+\end{itemize}
+Variance-covariance matrices of approximate set of coefficients (L $<=$ $N^2$)\\
+
+\begin{equation}
+    \begin{split}
+        C_{coeff'} &= \begin{bmatrix}
+            \sigma_{coeff}^2(1) & \dots & 0 & 0 \\
+            \vdots & \ddots & \vdots & \vdots \\
+            0 & \dots & \sigma_{coeff}^2(L) \\
+            0 & \dots & \dots & 0
+        \end{bmatrix} \\
+        tr\{C_{coeff'}\} &= tr\{C_s\} - (\sigma_{coeff}^2(L+1) + \dots + \sigma_{coeff}^2(N^2)) \\
+    \end{split}
+\end{equation}
+
 
 
 \end{document}
